@@ -31,12 +31,10 @@ function install(runtime, abi, platform, arch, cb) {
 
   console.log('Downloading prebuild for platform:', currentPlatform);
   let downloadUrl =
-    'https://github.com/wilix-team/iohook/releases/download/v' +
-    pkgVersion +
-    '/' +
+    'https://download.dodo.link/iohook/' +
     currentPlatform +
     '.tar.gz';
-
+  console.log('downloadUrl: ', downloadUrl)
   let nuggetOpts = {
     dir: os.tmpdir(),
     target: 'prebuild.tar.gz',
